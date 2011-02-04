@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><project xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd" name="Apache Mahout" xmlns="http://maven.apache.org/DECORATION/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <body>
+    <menu name="Modules" ref="modules">
+      <item name="Mahout Build Tools" href="http://www.apache.org/mahout-buildtools/index.html" />
+      <item name="Mahout Eclipse" href="http://www.apache.org/mahout-eclipse-support/index.html" />
+      <item name="Mahout Math" href="mahout-math/index.html" />
+      <item name="Mahout Core" href="mahout-core/index.html" />
+      <item name="Mahout Taste Webapp" href="mahout-taste-webapp/index.html" />
+      <item name="Mahout Utilities" href="mahout-utils/index.html" />
+      <item name="Mahout Examples" href="mahout-examples/index.html" />
+    </menu>
+    <menu ref="reports" />
+  </body>
+</project>

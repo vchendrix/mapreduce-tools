@@ -1,0 +1,111 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>edu.csueb.vhendrix</groupId>
+	<artifactId>mapreduce-tools</artifactId>
+	<name>Map reduce tools</name>
+	<version>0.0.1-SNAPSHOT</version>
+	<repositories>
+		<repository>
+			<id>maven2-repository.dev.java.net</id>
+			<name>Java.net Repository for Maven</name>
+			<url>http://download.java.net/maven/2/</url>
+			<layout>default</layout>
+		</repository>
+		<repository>
+			<id>lib-repo</id>
+			<name>lib-m2-repository</name>
+			<url>file://${basedir}/lib</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<releases>
+				<checksumPolicy>ignore</checksumPolicy>
+			</releases>
+		</repository>
+
+
+	</repositories>
+	<description>This project contains tool used with hadoop's map reduce implementation.  Some of the tools are: WordCount, PageRank and WikiDumpToLinkGraph</description>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.github.maven-hadoop.plugin</groupId>
+				<artifactId>maven-hadoop-plugin</artifactId>
+				<version>0.20.1</version>
+				<configuration>
+					<hadoopHome>${env.HADOOP_HOME}</hadoopHome>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.1</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-core</artifactId>
+			<version>0.20.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.8.5</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hadoop.hbase</groupId>
+			<artifactId>hbase</artifactId>
+			<version>0.20.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.2</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-core</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.mahout</groupId>
+			<artifactId>mahout</artifactId>
+			<version>0.4-SNAPSHOT</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.mahout.commons</groupId>
+			<artifactId>commons-cli</artifactId>
+			<version>2.0-mahout</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.htmlparser.jericho</groupId>
+			<artifactId>jericho-html</artifactId>
+			<version>3.1</version>
+		</dependency>
+	</dependencies>
+	<properties>
+		<hadoopHome>${env.HADOOP_HOME}</hadoopHome>
+		
+	</properties>
+</project>
